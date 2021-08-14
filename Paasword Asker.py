@@ -14,8 +14,8 @@ def sign_in():
     while i<n:
         ch=password[i]
         ch = bytes(ch, 'utf-8')
-        f = open("Answer Key.txt", "r")
-        j = (f.readline())
+##        f = open("Answer Key.txt", "r")
+##        j = (f.readline())
         num = j[i]
         num = int(num)
         a.append(num)
