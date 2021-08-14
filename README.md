@@ -1,1 +1,1 @@
-# My-1st-Repo
+# GitHub Repository
