@@ -7,8 +7,8 @@ def Decrypt(y):
     x=str()
     a=list()
     while i<(n):
-##        f = open("Answer Key.txt", "r")
-##        j = (f.readline())
+        f = open("Answer Key.txt", "r")
+        j = (f.readline())
         num = j[i]
         num = int(num)
         #num = int(input("Enter no."))
@@ -19,10 +19,10 @@ def Decrypt(y):
         s=str(s)
         x=x+s[2]
         i=i+1
-    #print("Decrypted Message:", x)
+    print("Decrypted Message:", x)
 
 f = open("Encrypted Message.txt", "r")
 y = f.read()
 f.close()
 Decrypt(y) 
-os.remove("Answer Key.txt")
+
