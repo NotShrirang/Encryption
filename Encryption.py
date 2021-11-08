@@ -24,6 +24,3 @@ def Encrypt(x):
 
 #x=input("Enter a string: ")
 #Encrypt(x)
-    
-
-    
