@@ -1,3 +1,3 @@
 # GitHub Repository
 
-Encryption and Decryption performed!
+You may import this in any python program to encrypt or decrypt strings, lists.
