@@ -1,24 +1,16 @@
-#Encryption
-import sqlite3
 import random
 
 def Encrypt(x):
-    m=len(list(x))
-    i=0
     y=str()
-    mylist = []
     answerKey = []
-    while i<m:
-        ch=x[i]
+    for ch in x:
         ch = bytes(ch, 'utf-8')
         r=random.randint(0,5)
         s=bytes([ch[0] + r])
         s=str(s)
         y=y+s[2]
-        i=i+1
         answerKey.append(str(r))
     return y, answerKey
-
 def encryptWithKey(x, answerKey):
     # m=len(list(x))
     i=0
@@ -32,8 +24,6 @@ def encryptWithKey(x, answerKey):
         y=y+s[2]
         i=i+1
     return y
-
-#Decryption
 def Decrypt(msg, answerKey):
     i=0
     x=str()
@@ -49,7 +39,6 @@ def Decrypt(msg, answerKey):
         x = x+s[2]
         i = i+1
     return x
-
 def decryptorFormatting(key):
     key = key.replace("[", "")
     key = key.replace("'", "")
@@ -57,3 +46,14 @@ def decryptorFormatting(key):
     key = key.replace(" ", "")
     key = key.replace("]", "")
     return list(key)
+def hash(msg):
+    l = len(list(msg))
+    s = ""
+    y = str()
+    for i in range(l):
+        ch = msg[i]
+        ch = bytes(ch, 'utf-8')
+        ch = bytes([ch[0]+i])
+        s = str(ch)
+        y = y + str(s[2])
+    return y
