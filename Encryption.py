@@ -1,19 +1,14 @@
 import random
 
 def Encrypt(x):
-    m=len(list(x))
-    i=0
     y=str()
-    mylist = []
     answerKey = []
-    while i<m:
-        ch=x[i]
+    for ch in x:
         ch = bytes(ch, 'utf-8')
         r=random.randint(0,5)
         s=bytes([ch[0] + r])
         s=str(s)
         y=y+s[2]
-        i=i+1
         answerKey.append(str(r))
     return y, answerKey
 def encryptWithKey(x, answerKey):
@@ -61,7 +56,6 @@ def hash(msg):
         ch = bytes([ch[0]+i])
         s = str(ch)
         y = y + str(s[2])
-    return y
 def deHash(msg):
     l = len(list(msg))
     s = ""
