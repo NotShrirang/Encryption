@@ -56,4 +56,14 @@ def hash(msg):
         ch = bytes([ch[0]+i])
         s = str(ch)
         y = y + str(s[2])
+def deHash(msg):
+    l = len(list(msg))
+    s = ""
+    y = str()
+    for i in range(l):
+        ch = msg[i]
+        ch = bytes(ch, 'utf-8')
+        ch = bytes([ch[0]-i])
+        s = str(ch)
+        y = y + str(s[2])
     return y
