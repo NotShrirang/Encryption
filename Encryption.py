@@ -1,6 +1,6 @@
 import random
 
-def Encrypt(msg:str|list):
+def encrypt(msg:str|list):
     '''
     Function for encrypting text.
     
@@ -40,7 +40,7 @@ def encryptWithKey(msg : str, key : list):
         y=y+s[2]
         i=i+1
     return y
-def Decrypt(msg : str, key: list):
+def decrypt(msg : str, key: list):
     '''
     Function for decrypting text.
     
