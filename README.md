@@ -1,7 +1,6 @@
 # Encryption
 
 <h5>Module for basic encryption decryption operations.</h5>
-<br>
 <h3>Functions :</h3>
 <h5>1. encrypt() - Function for encrypting text.</h5>
 <h5>2. encryptWithKey() - Function for encrypting text with user provided key.</h5>
